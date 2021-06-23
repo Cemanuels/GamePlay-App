@@ -24,6 +24,9 @@ export const styles = StyleSheet.create({
 		fontSize: 15,
 	},
 	check: {
+		position: 'absolute',
+		top: 7,
+		right: 7,
 		width: 12,
 		height: 12,
 		backgroundColor: theme.colors.secondary100,
@@ -32,11 +35,12 @@ export const styles = StyleSheet.create({
 		borderRadius: 3,
 	},
 	checked: {
+		position: 'absolute',
+		top: 7,
+		right: 7,
 		width: 10,
 		height: 10,
 		backgroundColor: theme.colors.primary,
-		alignSelf: 'flex-end',
-		marginRight: 7,
 		borderRadius: 3,
 	},
 });
