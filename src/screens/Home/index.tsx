@@ -69,19 +69,17 @@ export function Home() {
 				setCategory={handleSelectCategory}
 				hasCheckBox
 			/>
-
-			<View style={styles.content}>
-				<ListHeader title="Partidas Agendadas" subtitle="Total 6" />
-				<FlatList
-					data={appointments}
-					keyExtractor={(item) => item.id}
-					renderItem={({ item }) => (
-						<Appointment data={item} onPress={handleAppointmentDetails} />
-					)}
-					style={styles.matches}
-					ItemSeparatorComponent={() => <ListDivider />}
-				/>
-			</View>
+			<ListHeader title="Partidas Agendadas" subtitle="Total 6" />
+			<FlatList
+				data={appointments}
+				keyExtractor={(item) => item.id}
+				renderItem={({ item }) => (
+					<Appointment data={item} onPress={handleAppointmentDetails} />
+				)}
+				style={styles.matches}
+				contentContainerStyle={{ paddingBottom: 69 }}
+				ItemSeparatorComponent={() => <ListDivider />}
+			/>
 		</View>
 	);
 }
