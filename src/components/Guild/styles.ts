@@ -7,11 +7,11 @@ export const styles = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 		paddingHorizontal: 24,
-		backgroundColor: 'red',
 	},
 	content: {
 		flex: 1,
 		justifyContent: 'center',
+		marginLeft: 20,
 	},
 	title: {
 		fontFamily: theme.fonts.title700,
