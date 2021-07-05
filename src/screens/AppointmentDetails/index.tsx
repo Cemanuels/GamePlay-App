@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, ImageBackground, FlatList } from 'react-native';
 import { BorderlessButton } from 'react-native-gesture-handler';
+import { useRoute } from '@react-navigation/native';
 import { Fontisto } from '@expo/vector-icons';
 
 import { Background } from '../../components/Background';
@@ -15,6 +16,8 @@ import { theme } from '../../global/styles/theme';
 import { styles } from './styles';
 
 export function AppointmentDetails() {
+	const routes = useRoute();
+
 	const members = [
 		{
 			id: '1',
