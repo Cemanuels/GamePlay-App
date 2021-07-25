@@ -24,14 +24,15 @@ export function Guilds({ handleGuildSelect }: Props) {
 		setLoading(false);
 	}
 
-	useEffect(()=>{
+	useEffect(() => {
 		fetchGuilds();
-	})
+	}, []);
 
 	return (
 		<View style={styles.container}>
-			{
-				loading ? <Load /> :
+			{loading ? (
+				<Load />
+			) : (
 				<FlatList
 					data={guilds}
 					keyExtractor={(item) => item.id}
@@ -44,7 +45,7 @@ export function Guilds({ handleGuildSelect }: Props) {
 					contentContainerStyle={{ paddingBottom: 68, paddingTop: 103 }}
 					ListHeaderComponent={() => <ListDivider isCentered />}
 				/>
-			}
+			)}
 		</View>
 	);
 }
